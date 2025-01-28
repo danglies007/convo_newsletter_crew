@@ -457,12 +457,12 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "crewai", editable = "../../../crewai/crewAI" }]
+requires-dist = [{ name = "crewai", specifier = ">=0.100.0" }]
 
 [[package]]
 name = "crewai"
-version = "0.98.0"
-source = { editable = "../../../crewai/crewAI" }
+version = "0.100.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "appdirs" },
     { name = "auth0-python" },
@@ -471,6 +471,7 @@ dependencies = [
     { name = "click" },
     { name = "instructor" },
     { name = "json-repair" },
+    { name = "json5" },
     { name = "jsonref" },
     { name = "litellm" },
     { name = "openai" },
@@ -487,59 +488,9 @@ dependencies = [
     { name = "tomli-w" },
     { name = "uv" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "agentops", marker = "extra == 'agentops'", specifier = ">=0.3.0" },
-    { name = "appdirs", specifier = ">=1.4.4" },
-    { name = "auth0-python", specifier = ">=4.7.1" },
-    { name = "blinker", specifier = ">=1.9.0" },
-    { name = "chromadb", specifier = ">=0.5.23" },
-    { name = "click", specifier = ">=8.1.7" },
-    { name = "crewai-tools", marker = "extra == 'tools'", specifier = ">=0.32.1" },
-    { name = "docling", marker = "extra == 'docling'", specifier = ">=2.12.0" },
-    { name = "fastembed", marker = "extra == 'fastembed'", specifier = ">=0.4.1" },
-    { name = "instructor", specifier = ">=1.3.3" },
-    { name = "json-repair", specifier = ">=0.25.2" },
-    { name = "jsonref", specifier = ">=1.1.0" },
-    { name = "litellm", specifier = "==1.57.4" },
-    { name = "mem0ai", marker = "extra == 'mem0'", specifier = ">=0.1.29" },
-    { name = "openai", specifier = ">=1.13.3" },
-    { name = "openpyxl", specifier = ">=3.1.5" },
-    { name = "openpyxl", marker = "extra == 'openpyxl'", specifier = ">=3.1.5" },
-    { name = "opentelemetry-api", specifier = ">=1.22.0" },
-    { name = "opentelemetry-exporter-otlp-proto-http", specifier = ">=1.22.0" },
-    { name = "opentelemetry-sdk", specifier = ">=1.22.0" },
-    { name = "pandas", marker = "extra == 'pandas'", specifier = ">=2.2.3" },
-    { name = "pdfplumber", specifier = ">=0.11.4" },
-    { name = "pdfplumber", marker = "extra == 'pdfplumber'", specifier = ">=0.11.4" },
-    { name = "pydantic", specifier = ">=2.4.2" },
-    { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "pyvis", specifier = ">=0.3.2" },
-    { name = "regex", specifier = ">=2024.9.11" },
-    { name = "tiktoken", marker = "extra == 'embeddings'", specifier = "~=0.7.0" },
-    { name = "tomli", specifier = ">=2.0.2" },
-    { name = "tomli-w", specifier = ">=1.1.0" },
-    { name = "uv", specifier = ">=0.4.25" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "cairosvg", specifier = ">=2.7.1" },
-    { name = "mkdocs", specifier = ">=1.4.3" },
-    { name = "mkdocs-material", specifier = ">=9.5.7" },
-    { name = "mkdocs-material-extensions", specifier = ">=1.3.1" },
-    { name = "mkdocstrings", specifier = ">=0.22.0" },
-    { name = "mkdocstrings-python", specifier = ">=1.1.2" },
-    { name = "mypy", specifier = ">=1.10.0" },
-    { name = "pillow", specifier = ">=10.2.0" },
-    { name = "pre-commit", specifier = ">=3.6.0" },
-    { name = "pytest", specifier = ">=8.0.0" },
-    { name = "pytest-asyncio", specifier = ">=0.23.7" },
-    { name = "pytest-subprocess", specifier = ">=1.5.2" },
-    { name = "pytest-vcr", specifier = ">=1.0.2" },
-    { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "ruff", specifier = ">=0.8.2" },
+sdist = { url = "https://files.pythonhosted.org/packages/74/3e/801ef36c0aa0db616494a0ea9e04992faee66b9c4811479cab2bf49b22cf/crewai-0.100.0.tar.gz", hash = "sha256:d703b374f6e786bc7c19b8c4fa74c86f1ca14fd045a91bee299f4df5f9f18783", size = 7759073 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/14/dc/4f914d063bc5787906d7871d558fb7e778079f7db77424a46611bac32b1f/crewai-0.100.0-py3-none-any.whl", hash = "sha256:9d8ba89d44c76c591d05ba25eb5373175ca61e1616fb862d149589ba8ade4ab1", size = 233188 },
 ]
 
 [[package]]
@@ -586,14 +537,14 @@ wheels = [
 
 [[package]]
 name = "deprecated"
-version = "1.2.17"
+version = "1.2.18"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2f/20/caa25c084ebad492360bf28ba5cb74f27b50fc6f3df965fd0add2b5b5993/deprecated-1.2.17.tar.gz", hash = "sha256:0114a10f0bbb750b90b2c2296c90cf7e9eaeb0abb5cf06c80de2c60138de0a82", size = 2928237 }
+sdist = { url = "https://files.pythonhosted.org/packages/98/97/06afe62762c9a8a86af0cfb7bfdab22a43ad17138b07af5b1a58442690a2/deprecated-1.2.18.tar.gz", hash = "sha256:422b6f6d859da6f2ef57857761bfb392480502a64c3028ca9bbe86085d72115d", size = 2928744 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/46/90/89be9a665bf63d3baaba6f34d9a514655abb42be2cc129f31c96df2cef51/Deprecated-1.2.17-py2.py3-none-any.whl", hash = "sha256:69cdc0a751671183f569495e2efb14baee4344b0236342eec29f1fde25d61818", size = 9140 },
+    { url = "https://files.pythonhosted.org/packages/6e/c6/ac0b6c1e2d138f1002bcf799d330bd6d85084fece321e662a14223794041/Deprecated-1.2.18-py2.py3-none-any.whl", hash = "sha256:bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec", size = 9998 },
 ]
 
 [[package]]
@@ -1055,6 +1006,15 @@ wheels = [
 ]
 
 [[package]]
+name = "json5"
+version = "0.10.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/3d/bbe62f3d0c05a689c711cff57b2e3ac3d3e526380adb7c781989f075115c/json5-0.10.0.tar.gz", hash = "sha256:e66941c8f0a02026943c52c2eb34ebeb2a6f819a0be05920a6f5243cd30fd559", size = 48202 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/aa/42/797895b952b682c3dafe23b1834507ee7f02f4d6299b65aaa61425763278/json5-0.10.0-py3-none-any.whl", hash = "sha256:19b23410220a7271e8377f81ba8aacba2fdd56947fbb137ee5977cbe1f5e8dfa", size = 34049 },
+]
+
+[[package]]
 name = "jsonpickle"
 version = "4.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1437,7 +1397,7 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "1.60.1"
+version = "1.60.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -1449,9 +1409,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/4c/c4/a220c957aa4097f25498770c6eff8f3abd35934a8859e7a78928a8a70846/openai-1.60.1.tar.gz", hash = "sha256:beb1541dfc38b002bd629ab68b0d6fe35b870c5f4311d9bc4404d85af3214d5e", size = 348070 }
+sdist = { url = "https://files.pythonhosted.org/packages/08/ae/8d9706b8ff2363287b4a8807de2dd29cdbdad5424e9d05d345df724320f5/openai-1.60.2.tar.gz", hash = "sha256:a8f843e10f2855713007f491d96afb2694b11b5e02cb97c7d01a0be60bc5bb51", size = 348185 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7a/ad/55b2d03feda5a0adc0a86048dcb7c9863fd24a3726815a04d5669e82e41e/openai-1.60.1-py3-none-any.whl", hash = "sha256:714181ec1c452353d456f143c22db892de7b373e3165063d02a2b798ed575ba1", size = 456110 },
+    { url = "https://files.pythonhosted.org/packages/e5/5a/d5474ca67a547dde9b87b5bc8a8f90eadf29f523d410f2ba23d63c9b82ec/openai-1.60.2-py3-none-any.whl", hash = "sha256:993bd11b96900b9098179c728026f016b4982ded7ee30dfcf4555eab1171fff9", size = 456107 },
 ]
 
 [[package]]
@@ -1785,7 +1745,7 @@ wheels = [
 
 [[package]]
 name = "posthog"
-version = "3.10.0"
+version = "3.11.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "backoff" },
@@ -1794,9 +1754,9 @@ dependencies = [
     { name = "requests" },
     { name = "six" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/12/d0/834621a426b808512a7945ab983015f08bd44b9e6635d8e5da49ee01362a/posthog-3.10.0.tar.gz", hash = "sha256:c07113c0558fde279d0462010e4ad87b6a2a76cb970cae0122d5a31d629fc27b", size = 60295 }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/f9/ffb682dfcfe43ff38c501791b8b4c01ba25f772c5d16bdb8c0f992f099fd/posthog-3.11.0.tar.gz", hash = "sha256:42a1f88cbcddeceaf6e8900a528db62d84fc56f6e5809f3d6dfb40e6f743091e", size = 61344 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/82/7a/73ab65b6f030e92b859b1d7f071cdf2a687b78ea3028522d6fee87071dec/posthog-3.10.0-py2.py3-none-any.whl", hash = "sha256:8481949321ba84059bfc8778d358ffec008c64efe834ac7c8eae80243fafa090", size = 71031 },
+    { url = "https://files.pythonhosted.org/packages/e6/21/a7975b832603fed31930860108e12f7680ad829d74ce05eab2df1a17ae2d/posthog-3.11.0-py2.py3-none-any.whl", hash = "sha256:8cbd52c26bcdfbe65c4ea84a8090cfa2e046879d6b6d71da68e279a5b4aedb46", size = 72005 },
 ]
 
 [[package]]
